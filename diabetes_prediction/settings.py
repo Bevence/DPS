@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '8%eyqy!#tw4$l(@p8j9f)s!rfnx0bqwhfu&!t=8qfuyhjp9j73'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG =  False 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["diabetes-prediction-system.herokuapp.com"]
+
 
 
 # Application definition

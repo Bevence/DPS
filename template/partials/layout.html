@@ -3,6 +3,7 @@
 <head>
 {% load static %}
   <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
   <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
@@ -35,8 +36,6 @@
   </style>
 </head>
 <body>
-  
-  <!--NavBar-->
 
 
   {% block header %}
@@ -44,35 +43,24 @@
 
 
 
-  <!--End NabBar-->
-  <!--carousel starts-->
+
   {% block carousel %}
   {% endblock carousel %}
-  <!--carousel ends-->
 
-<!--description starts-->
   {% block features %}
   {% endblock features %}
-<!--description ends-->
 
- 
-  <!--some-->
   {% block blog %}
   {% endblock blog %}
-  <!--end some-->
-
-  <!--algorithms start-->
+ 
   {% block algorithms %}
   {% endblock algorithms %}
-  <!--algorithms ends-->
   
-  <!--Footer Starts-->
   {% block footer %}
   {% endblock footer %}
-  <!--Footer Ends-->
-  <!--Script Starts-->
+ 
   {% block script %}
   {% endblock script %}
-  <!--Script Ends-->
+  
 </body>
 </html>

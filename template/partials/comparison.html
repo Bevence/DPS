@@ -33,13 +33,13 @@
 
 <script>  
 
-// bargraph  of accuracy
+
         var data = JSON.parse("{{data|escapejs}}"); 
         console.log(data);
       var dataArray= data['accuracy'];
-        // var dataArray=[1,2,3,4,5];
+      
         console.log(dataArray);
-        var dps = [];   //dataPoints. 
+        var dps = [];   
    
 	 var chart = new CanvasJS.Chart("chartContainer",{
       	title :{
@@ -54,7 +54,7 @@
       	data: [{
         type: "column",
        
-      		// indexlabel:['one','tow','three','four','fiveygug'],
+      	
       		dataPoints : dps,
            
       	}]
@@ -73,8 +73,7 @@
      chart.render();
 
 
-  
-// piechart of f1score
+
 var dataArray1= data['f1score'];
 var chart1 = new CanvasJS.Chart("chartContainer1", {
 	animationEnabled: true,
@@ -99,8 +98,7 @@ var chart1 = new CanvasJS.Chart("chartContainer1", {
 });
 chart1.render();    
 
-//bardiagram of precision
-var dps2 = [];   //dataPoints. 
+var dps2 = [];   
 var dataArray2= data['precision'];
 	 var chart2 = new CanvasJS.Chart("chartContainer2",{
       	title :{
@@ -115,7 +113,7 @@ var dataArray2= data['precision'];
       	data: [{
         type: "column",
        
-      		// indexlabel:['one','tow','three','four','fiveygug'],
+      		
       		dataPoints : dps2,
            
       	}]
@@ -134,8 +132,7 @@ var dataArray2= data['precision'];
      chart2.render();
        
 
-  
-// piechart of recall
+
 var dataArray3= data['recall'];
 var chart3 = new CanvasJS.Chart("chartContainer3", {
 	animationEnabled: true,
@@ -163,54 +160,10 @@ chart3.render();
 
 
     </script>
-    <!-- <br>
-    <br>
-    <br>
-    <br>
-    <table border=" 5px solid black;" style="font-size:20px; width: 80%;margin-left:auto;margin-right:auto; background-color: #f1f1c1;">
-      
-      <thead><tr>
-          <script>
-          //for(var j=0; j<2; j++)
-         // {
-          document.write("<th><label style='color:red;'>"+'S.N'+"</label></th>");
-            document.write("<th><label style='color:red;'>"+'Algorithm'+"</label></th>");
-            document.write("<th><label style='color:red;'>"+'Result'+"</label></th>");
-          //}
-          </script>
-          </tr>
-      </thead>
-      <tbody>
-        <script type="text/javascript">	
-          var data = JSON.parse("{{data|escapejs}}"); 
-          var dataArray2=data['result'];
-          var dict={
-            1:"Positive",
-            0:"Negative"
-          }
-    for(var i =0; i<dataArray2.length; i++)
-    {
-      document.write("<tr>");
-      //for(var k=1; k<=10; k++)
-       // {
-        document.write("<td>"+(i+1)+"</td>");
-          document.write("<td>"+label[i]+"</td>");
-          document.write("<td>"+dict[dataArray2[i]]+"</td>");	
-       // }
-      document.write("</tr>"); 
-    }	
-    </script>
-      </tbody>
-    </table> -->
+   
 
   {% endblock carousel %}
-                    <!-- <div id="chartContainer" style="height: 360px; width: 100%;">
-                        
-                    </div> -->
-
-
-
-
+  
  
   {% block script %}
   {% include "partials/script.html" %}
