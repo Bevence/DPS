@@ -1,0 +1,10 @@
+heroku login
+heroku apps:create <app_name>
+heroku git:remote -a <heroku_app_name>
+git push heroku master
+
+## postgresql database setup
+sudo su - postgresql
+postgresql
+CREATE USER username WITH PASSWORD 'password';
+CREATE DATABASE db_name WITH OWNER username;
